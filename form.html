@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/sidebar.css">
+    <link rel="stylesheet" href="style/navbar.css">
+    <link rel="stylesheet" href="style/content.css">
+    <link rel="stylesheet" href="style/components.css">
+    <title>Document</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar-custom">
+        <div class="navigation">
+            <a href="" class="active">Beazina</a>
+            <a href="">Mpiandraikitra</a>
+        </div>
+        <div class="navbar-user">
+            <div class="user-menu-wrapper">
+                <div class="user-info" onclick="toggleUserMenu()">
+                    <div class="user-avatar">
+                        <img src="assets/image/profil.jpg" alt="">
+                    </div>
+                    <div class="user-details">
+                        <div class="user-name">Sokigny MIFIKITRA</div>
+                        <div class="user-role">Admin Maitso</div>
+                    </div>
+                    <i class="bi bi-chevron-down user-dropdown-icon"></i>
+                </div>
+
+                <div class="user-dropdown" id="userDropdown">
+                    <div class="dropdown-header">
+                        <div class="user-avatar-large">
+                            <img src="assets/image/profil.jpg" alt="">
+                        </div>
+                        <div class="user-info-large">
+                            <div class="user-name-large">Sokigny MIFIKITRA</div>
+                            <div class="user-email">Admin Maitso</div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown-divider"></div>
+
+                    <a href="#" class="dropdown-item">
+                        <i class="bi bi-person"></i>
+                        <span>Mon Profil</span>
+                    </a>
+                    <a href="#" class="dropdown-item">
+                        <i class="bi bi-gear"></i>
+                        <span>Paramètres</span>
+                    </a>
+
+                    <div class="dropdown-divider"></div>
+
+                    <button class="dropdown-item logout-item" onclick="alert('Déconnexion')">
+                        <i class="bi bi-box-arrow-right"></i>
+                        <span>Déconnexion</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="layout-container">
+        <aside class="sidebar-wrapper">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <button class="sidebar-toggle" onclick="toggleSidebar()" aria-label="Toggle sidebar">
+                        <img src="assets/image/logo2.png" alt="">
+                    </button>
+                </div>
+                <h2 class="sidebar-title">FIVONDRONANA FAHA VII</h2>
+                <i class="bi bi-list">
+                </i>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="" class="sidebar-link active" data-tooltip="Accueil">
+                    <i class="">
+                        <img src="assets/image/logo1.jpg" alt="">
+                    </i>
+                    <span class="link-text">Sampana Mavo</span>
+                </a>
+
+                <a href="" class="sidebar-link" data-tooltip="Catégories">
+                    <i class="">
+                        <img src="assets/image/logo4.png" alt="">
+                    </i>
+                    <span class="link-text">Antoko Hara</span>
+                </a>
+
+                <a href="" class="sidebar-link" data-tooltip="Produits">
+                    <i class="">
+                        <img src="assets/image/logo5.png" alt="">
+                    </i>
+                    <span class="link-text">Mpiandalana</span>
+                </a>
+
+                <a href="" class="sidebar-link" data-tooltip="Produits">
+                    <i class="">
+                        <img src="assets/image/logo6.png" alt="">
+                    </i>
+                    <span class="link-text">Menafify</span>
+                </a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <div class="titleContent">
+                <h1>Formulaire d'ajout</h1>
+                <a href="index.html" class="btn btn-default">Liste des beazina</a>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <form action="">
+                        <div class="personalite">
+                            <div class="image">
+                                <div class="image-preview-container">
+                                    <img id="imagePreview" src="assets/image/default-avatar.png" alt="Aperçu" style="display: block;">
+                                    <label for="imageInput" class="image-upload-label">Choisir une photo</label>
+                                </div>
+                                <input type="file" id="imageInput" accept="image/*" style="display: none;">
+                            </div>
+                            <div class="anarana">
+                                <div class="">
+                                    <label for="anarana" class="form-label">Anarana <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="anarana" name="anarana" required>
+                                </div>
+                                <div class="">
+                                    <label for="fanampiny" class="form-label">Fanampiny <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="fanampiny" name="fanampiny" required>
+                                </div>
+                                <div class="">
+                                    <label for="totem" class="form-label">Totem na Fiantso <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="totem" name="totem" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ray">
+                            <div class="">
+                                <label for="ray" class="form-label">Ray <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="ray" name="ray" required>
+                            </div>
+                            <div class="">
+                                <label for="reny" class="form-label">Reny <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="reny" name="reny" required>
+                            </div>
+
+                            <div class="">
+                                <label for="finday" class="form-label">Laharana finday</label>
+                                <input type="text" class="form-control" id="finday" name="finday" required>
+                            </div>
+                            <div class="">
+                                <label for="mailaka" class="form-label">Laharana mailaka</label>
+                                <input type="mail" class="form-control" id="mailaka" name="mailaka" required>
+                            </div>
+                        </div>
+                        <div class="andraikitra">
+                            <div class="">
+                                <label for="andraikitra" class="form-label">Andraikitra <span
+                                        class="text-danger">*</span></label>
+                                <select name="andraikitra" id="">
+                                    <option value="">Beazina</option>
+                                    <option value="">Mpiandraikitra</option>
+                                    <option value="">Birao</option>
+                                    <option value="">Komitim-pivondronana</option>
+                                </select>
+                            </div>
+                            <div class="">
+                                <label for="sampana" class="form-label">Sampana <span
+                                        class="text-danger">*</span></label>
+                                <input type="sampana" class="form-control" id="nom" name="nom" required value="Maitso">
+                            </div>
+                            <div class="">
+                                <label for="dateNaissance" class="form-label">Daty nahaterahana <span
+                                        class="text-danger">*</span></label>
+                                <input type="date" class="form-control" id="dateNaissance" name="dateNaissance"
+                                    required>
+                            </div>
+                            <div class="">
+                                <label for="manambady" class="form-label">Manambady <span
+                                        class="text-danger">*</span></label>
+                                <div class="safidy">
+                                    <div>
+                                        <p>Eny</p>
+                                        <input type="radio" class="form-control" id="nom" name="manambady">
+                                    </div>
+                                    <div>
+                                        <p>Tsia</p>
+                                        <input type="radio" class="form-control" id="nom" name="manambady">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="">
+                                <label for="adiresy" class="form-label">Adiresy <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="adiresy" name="adiresy" required>
+                            </div>
+                            <div class="">
+                                <label for="kilasy" class="form-label">Kilasy</label>
+                                <input type="text" class="form-control" id="kilasy" name="kilasy" required>
+                            </div>
+                            <div class="">
+                                <label for="fianarana" class="form-label">Toeram-pianarana</label>
+                                <input type="text" class="form-control" id="fianarana" name="fianarana" required>
+                            </div>
+                            <div class="">
+                                <label for="asa" class="form-label">Asa</label>
+                                <input type="text" class="form-control" id="asa" name="asa" required>
+                            </div>
+                            <div class="">
+                                <label for="toeranaAsa" class="form-label">Toeram-piasana</label>
+                                <input type="text" class="form-control" id="toeranaAsa" name="toeranaAsa" required>
+                            </div>
+                            <div class="">
+                                <label for="fiangonana" class="form-label">Fiangonana</label>
+                                <input type="text" class="form-control" id="fiangonana" name="fiangonana" required>
+                            </div>
+                            <div class="">
+                                <label for="sampanaHafa" class="form-label">Sampana na Fikambanana hafa</label>
+                                <input type="text" class="form-control" id="sampanaHafa" name="sampanaHafa" required>
+                            </div>
+                            <div class="">
+                                <label for="batisa" class="form-label">Batisa</label>
+                                <div class="safidy">
+                                    <div>
+                                        <p>Eny</p>
+                                        <input type="radio" class="form-control" id="batisa" name="manambady">
+                                    </div>
+                                    <div>
+                                        <p>Tsia</p>
+                                        <input type="radio" class="form-control" id="batisa" name="manambady">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="">
+                                <label for="mpandray" class="form-label">Mpandray</label>
+                                <div class="safidy">
+                                    <div>
+                                        <p>Eny</p>
+                                        <input type="radio" class="form-control" id="mpandray" name="manambady">
+                                    </div>
+                                    <div>
+                                        <p>Tsia</p>
+                                        <input type="radio" class="form-control" id="mpandray" name="manambady">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="">
+                                <label for="mavo" class="form-label">Daty nidirana sampana Mavo</label>
+                                <input type="date" class="form-control" id="mavo" name="mavo" required>
+                            </div>
+                            <div class="">
+                                <label for="maitso" class="form-label">Daty nidirana sampana Maitso</label>
+                                <input type="date" class="form-control" id="maitso" name="maitso" required>
+                            </div>
+                            <div class="">
+                                <label for="mena" class="form-label">Daty nidirana sampana Mena</label>
+                                <input type="date" class="form-control" id="mena" name="mena" required>
+                            </div>
+                            <div class="">
+                                <label for="menafify" class="form-label">Daty nidirana sampana Menafify</label>
+                                <input type="date" class="form-control" id="menafify" name="menafify" required>
+                            </div>
+                            <div class="">
+                                <label for="mpiandraikitra" class="form-label">Daty nidirana mpiandraikitra</label>
+                                <input type="date" class="form-control" id="mpiandraikitra" name="mpiandraikitra"
+                                    required>
+                            </div>
+                            <div class="">
+                                <label for="fanekena" class="form-label">Daty nanaovana fanekena</label>
+                                <input type="date" class="form-control" id="fanekena" name="fanekena" required>
+                            </div>
+                            <div class="">
+                                <label for="fanekena" class="form-label">Daty nanaovana fanekena mpiandraikitra</label>
+                                <input type="date" class="form-control" id="fanekena" name="fanekena" required>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function toggleUserMenu() {
+            const dropdown = document.getElementById('userDropdown');
+            dropdown.classList.toggle('show');
+        }
+
+        // Fermer le menu si on clique ailleurs
+        document.addEventListener('click', function (event) {
+            const userMenu = document.querySelector('.user-menu-wrapper');
+            const dropdown = document.getElementById('userDropdown');
+
+            if (userMenu && !userMenu.contains(event.target)) {
+                dropdown.classList.remove('show');
+            }
+        });
+
+        // Afficher l'aperçu de l'image sélectionnée
+        document.getElementById('imageInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file && file.type.startsWith('image/')) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('imagePreview').src = e.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+<script>
+    // Toggle sidebar
+    function toggleSidebar() {
+        const sidebar = document.querySelector('.sidebar-wrapper');
+        const mainContent = document.querySelector('.main-content');
+        sidebar.classList.toggle('collapsed');
+        mainContent.classList.toggle('sidebar-collapsed');
+    }
+</script>
+
+</html>

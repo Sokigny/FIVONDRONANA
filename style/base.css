@@ -1,0 +1,54 @@
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Layout principal */
+.layout-container {
+    display: flex;
+    min-height: 100vh;
+    padding-top: var(--navbar-height);
+}
+
+.main-content {
+    flex: 1;
+    margin-left: var(--sidebar-width-expanded);
+    transition: margin-left var(--transition-fast);
+    background-color: var(--color-bg);
+    min-height: calc(100vh - var(--navbar-height));
+}
+
+.main-content.sidebar-collapsed {
+    margin-left: var(--sidebar-width-collapsed);
+}
+
+.content-wrapper {
+    padding: var(--spacing-6);
+    max-width: 1400px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+    }
+
+    .content-wrapper {
+        padding: var(--spacing-4);
+    }
+}
